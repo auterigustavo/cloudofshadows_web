@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cloud of shadows</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-black text-white font-[Oswald] scroll-smooth">
+
+    <!-- Fondo -->
+    <div class="fixed inset-0 -z-10 bg-[url('images/background.png')] bg-cover bg-center opacity-20"></div>
+
+    <header
+        class="sticky top-0 z-50 relative flex items-center p-4 bg-black/30 backdrop-blur-md border-b border-white/10"
+        id="header">
+
+        <!-- Boton -->
+        <button id="menuBtn" class="text-2xl z-10">
+            ☰
+        </button>
+
+        <!-- Logo -->
+        <div class="absolute left-1/2 -translate-x-1/2">
+            <a href="#inicio">
+                <img src="images/cloudpng-white.png" alt="" class="w-40 h-20 object-contain">
+            </a>
+        </div>
+
+        <!-- Menú oculto -->
+        <div id="menu"
+            class="hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-md flex flex-col items-center gap-4 py-4">
+            <a href="#inicio">Inicio</a>
+            <a href="#remeras">Remeras</a>
+            <a href="#shows">Proximos shows</a>
+            <a href="#discografia">Discografia</a>
+        </div>
+
+    </header>
+
+    <section class="p-4" id="inicio">
+        <div class="bg-gray-800/20 p-4 rounded-xl">
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper rounded-2xl overflow-hidden">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide flex flex-col items-center">
+                        <img src="images/en-vivo/Cloud of Shadows Club Re-8.jpg"
+                            class="w-3/4 object-cover rounded-xl opacity-75" />
+                    </div>
+
+                    <div class="swiper-slide flex flex-col items-center">
+                        <img src="images/en-vivo/Cloud of Shadows Club Re-21.jpg"
+                            class="w-3/4 object-cover rounded-xl opacity-75" />
+                    </div>
+
+                    <div class="swiper-slide flex flex-col items-center">
+                        <img src="images/en-vivo/cloud1.jpg" class="w-3/4 object-cover rounded-xl opacity-75" />
+                    </div>
+
+                </div>
+
+                <!-- Flechas -->
+                <div class="swiper-button-next text-white"></div>
+                <div class="swiper-button-prev text-white"></div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="p-4 space-y-6" id="remeras">
+
+        <section class="p-4 flex flex-col items-center">
+            <h2 class="text-2xl mb-4 text-center">REMERAS</h2>
+
+            <div class="flex flex-col items-center gap-4">
+                <!--si quiero columnas para mas productos "grid grid-cols-2"-->
+
+                <div class="bg-gray-800/20 p-4 rounded-xl flex flex-col items-center">
+                    <img src="images/remeras/remera-el-arbol.jpeg" class="w-3/4 inline-2xs rounded mb-2" />
+                    <p>Remera "El arbol de la muerte"</p>
+                    <p class="text-green-400">$30.000</p>
+                    <a href="#" id="btnComprar"
+                        class="inline-block mt-4 bg-red-600 px-4 py-2 rounded hover:bg-red-500 transition">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <section class="p-4 text-center" id="shows">
+        <h2 class="text-2xl mb-4">PRÓXIMOS SHOWS</h2>
+
+        <div class="bg-gray-800/20 p-6 rounded-xl flex flex-col items-center">
+            <img src="images/fecha-01052026.jpeg" class="w-1/2 inline-2xs rounded mb-2" />
+            <p>01 de Mayo - Teatro Flores</p>
+            <a href="#" id="btnComprar2"
+                class="inline-block mt-4 bg-red-600 px-4 py-2 rounded hover:bg-red-500 transition">
+                Comprar entrada
+            </a>
+        </div>
+    </section>
+
+    <section class="p-4 text-center" id="discografia">
+        <h2 class="text-2xl mb-4">DISCOGRAFÍA</h2>
+
+        <div class="bg-gray-800/20 p-4 rounded-xl flex flex-col items-center">
+
+            <div class="grid grid-cols-3 gap-4 place-items-center">
+                <a
+                    href="https://music.youtube.com/playlist?list=OLAK5uy_naeFLlKODeH3WpT5Po6e_kkx5yJ2SxacM&si=W1EZVqd4o6OqhlXW">
+                    <img src="images/album/the-skies-are-screaming.avif" alt="_blank"
+                        class="w-24 rounded mb-2 hover:scale-105 transition">
+                </a>
+                <a
+                    href="https://music.youtube.com/playlist?list=OLAK5uy_kqvjRHY4jqQ0MojgJwC61sdR69ZITfNXY&si=Ehdkt7Mplh0M6VVv">
+                    <img src="images/album/beyond-the-physical.avif" alt="_blank"
+                        class="w-24 rounded mb-2 hover:scale-105 transition">
+                </a>
+                <a
+                    href="https://music.youtube.com/playlist?list=OLAK5uy_nHc8Vf0Ki8nKe99qnKcdqghZL_eEhjFxY&si=rv99kEL-FQoV38CZ">
+                    <img src="images/album/rodeando-el-abismo.avif" alt="_blank"
+                        class="w-24 rounded mb-2 hover:scale-105 transition">
+                </a>
+            </div>
+            <p class="mb-2">Último lanzamiento</p>
+
+            <iframe class="w-3/4 aspect-video rounded shadow-lg"
+                src="https://www.youtube.com/embed/5DFYQiTecUY?si=5zBwoiYtyXQLJRPE" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="text-center mt-4 p-4">
+        <p class="mb-4 italic">Seguinos en nuestras redes</p>
+
+        <div class="flex justify-center gap-4">
+            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center">
+                <a href="https://www.instagram.com/cloudofshadows/?hl=es-la" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/960px-Instagram_logo_2022.svg.png"
+                        class="w-8 h-8 object-contain" alt="">
+                </a>
+            </div>
+            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center">
+                <a href="https://www.youtube.com/@CloudofShadows" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+                        class="w-8 h-8 object-contain" alt="">
+                </a>
+            </div>
+            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center">
+                <a href="https://open.spotify.com/intl-es/artist/4vF5Vzt1R1NcQiRuXAl5lD" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/960px-Spotify_App_Logo.svg.png"
+                        class="w-8 h-8 object-contain rounded-xl" alt="">
+                </a>
+            </div>
+            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center">
+                <a href="https://cloudofshadows.bandcamp.com/?search_item_id%3D2976774171%26search_item_type%3Db%26search_match_part%3D%253F%26search_page_id%3D5254761919%26search_page_no%3D0%26search_rank%3D1"
+                    target="_blank">
+                    <img src="data:image/png;base64,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"
+                        class="w-8 h-8 object-contain rounded-xl" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--modal compra remeras-->
+    <div id="modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+
+        <div class="bg-black/70 p-6 rounded-xl w-11/12 max-w-md">
+
+            <h2 class="text-xl mb-4 text-center">Realizar pedido</h2>
+
+            <!-- Formulario -->
+            <div class="flex flex-col gap-3">
+
+                <input id="cantidad" type="number" min="1" max="10" placeholder="Cantidad"
+                    class="p-2 rounded bg-gray-800">
+
+                <select id="talle" class="p-2 rounded bg-gray-800">
+                    <option value="" disabled selected hidden>Talle</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select id="envio" class="p-2 rounded bg-gray-800">
+                    <option value="" disabled selected hidden>Tipo de envío</option>
+                    <option>Retiro en persona</option>
+                    <option>Envío a domicilio</option>
+                    <option>Coordinar con el vendedor</option>
+                </select>
+
+                <select id="pago" class="p-2 rounded bg-gray-800">
+                    <option value="" disabled selected hidden>Medio de pago</option>
+                    <option>Efectivo</option>
+                    <option>Transferencia</option>
+                </select>
+
+                <!-- Botón enviar -->
+                <button id="enviarPedido" class="bg-green-600 py-2 rounded hover:bg-green-500 transition">
+                    Realizar pedido
+                </button>
+
+                <!-- Cerrar -->
+                <button id="cerrarModal" class="text-gray-400 mt-2">
+                    Cancelar
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--modal compra de entradas-->
+    <div id="modal2" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+
+        <div class="bg-black/70 p-6 rounded-xl w-11/12 max-w-md">
+
+            <h2 class="text-xl mb-4 text-center">Comprar Entrada</h2>
+
+            <!-- Formulario -->
+            <div class="flex flex-col gap-3">
+
+                <input id="cantidad2" type="number" min="1" max="10" placeholder="Cantidad"
+                    class="p-2 rounded bg-gray-800">
+
+                <select id="seleccionEvento" class="p-2 rounded bg-gray-800">
+                    <option value="" disabled selected hidden>Seleccionar evento</option>
+                    <option>01/05/2026 - Teatro Flores</option>
+                </select>
+
+                <select id="envio2" class="p-2 rounded bg-gray-800">
+                    <option value="" disabled selected hidden>Tipo de envío</option>
+                    <option>Retiro en persona</option>
+                    <option>Coordinar con el vendedor</option>
+                </select>
+
+                <select id="pago2" class="p-2 rounded bg-gray-800">
+                    <option value="" disabled selected hidden>Medio de pago</option>
+                    <option>Efectivo</option>
+                    <option>Transferencia</option>
+                </select>
+
+                <!-- Botón enviar -->
+                <button id="enviarPedido2" class="bg-green-600 py-2 rounded hover:bg-green-500 transition">
+                    Realizar pedido
+                </button>
+
+                <!-- Cerrar -->
+                <button id="cerrarModal2" class="text-gray-400 mt-2">
+                    Cancelar
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
