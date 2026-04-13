@@ -16,6 +16,18 @@ const swiper = new Swiper(".mySwiper", {
   speed: 800,
 });
 
+//swiper productos
+const productoSwiper = new Swiper(".productoSwiper", {
+  loop: true,
+
+  navigation: {
+    nextEl: ".productoSwiper .swiper-button-next",
+    prevEl: ".productoSwiper .swiper-button-prev",
+  },
+
+  autoplay: false,
+});
+
 
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("menu");
@@ -63,19 +75,32 @@ enviarPedido.addEventListener("click", () => {
   const envio = document.getElementById("envio").value;
   const pago = document.getElementById("pago").value;
 
-  const mensaje = `Hola! Quiero comprar:
+  if (!cantidad || !talle || !envio || !pago) {
+    alert("Por favor completá todos los campos");
+    return;
+  }
+
+  const mensaje = `Hola! Quiero comprar una remera
   
-Remera: El arbol de la muerte
+Modelo: El arbol de la muerte
 Cantidad: ${cantidad}
 Talle: ${talle}
 Envío: ${envio}
 Pago: ${pago}`;
 
-  const numero = "5491123430468";
+  const numero = "5491157291014";
 
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
   window.open(url, "_blank");
+
+  modal.classList.add("hidden");
+
+// limpiar
+document.getElementById("cantidad").value = "";
+document.getElementById("talle").value = "";
+document.getElementById("envio").value = "";
+document.getElementById("pago").value = "";
 });
 
 //para formulario compra entradas
@@ -97,18 +122,48 @@ enviarPedido2.addEventListener("click", () => {
   const cantidad2 = document.getElementById("cantidad2").value;
   const envio2 = document.getElementById("envio2").value;
   const pago2 = document.getElementById("pago2").value;
-  const seleccionEvento = getElementById("seleccionEvento").value;
+  const seleccionEvento = document.getElementById("seleccionEvento").value;
 
-  const mensaje2 = `Detalle del pedido:
+  if (!cantidad2 || !envio2 || !pago2 || !seleccionEvento) {
+    alert("Por favor completa todos los campos");
+    return;
+  }
+
+  const mensaje2 = `Hola, quiero una entrada
   
-Entrada: ${seleccionEvento}
+Evento: ${seleccionEvento}
 Cantidad: ${cantidad2}
 Envío: ${envio2}
 Pago: ${pago2}`;
 
-  const numero2 = "5491123430468";
+  const numero2 = "5491157291014";
 
   const url2 = `https://wa.me/${numero2}?text=${encodeURIComponent(mensaje2)}`;
 
   window.open(url2, "_blank");
+
+  modal2.classList.add("hidden");
+
+// limpiar
+document.getElementById("cantidad2").value = "";
+document.getElementById("SeleccionEvento").value = "";
+document.getElementById("envio2").value = "";
+document.getElementById("pago2").value = "";
+});
+
+//agrandar imagen producto
+const modalImagen = document.getElementById("modalImagen");
+const imagenAmpliada = document.getElementById("imagenAmpliada");
+
+// abrir imagen
+document.querySelectorAll(".producto-img").forEach(img => {
+  img.addEventListener("click", () => {
+    modalImagen.classList.remove("hidden");
+    imagenAmpliada.src = img.src;
+  });
+});
+
+// cerrar al hacer click
+modalImagen.addEventListener("click", () => {
+  modalImagen.classList.add("hidden");
 });

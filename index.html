@@ -85,13 +85,42 @@
                 <!--si quiero columnas para mas productos "grid grid-cols-2"-->
 
                 <div class="bg-gray-800/20 p-4 rounded-xl flex flex-col items-center">
-                    <img src="images/remeras/remera-el-arbol.jpeg" class="w-3/4 inline-2xs rounded mb-2" />
-                    <p>Remera "El arbol de la muerte"</p>
+                    <!--Seccion nueva-->
+                    <!-- <img src="images/remeras/remera-el-arbol.jpeg" class="w-3/4 inline-2xs rounded mb-2" /> -->
+
+                    <!-- Swiper producto -->
+                    <div class="swiper productoSwiper w-3/4 max-w-xs rounded overflow-hidden">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="images/remeras/remera-el-arbol.jpg"
+                                    class="w-full h-90 object-contain rounded cursor-pointer producto-img" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="images/remeras/tabla-de-talles.jpg"
+                                    class="w-full h-90 object-contain rounded cursor-pointer producto-img" />
+                            </div>
+
+                        </div>
+
+                        <!-- Flechas -->
+                        <div class="swiper-button-next text-white"></div>
+                        <div class="swiper-button-prev text-white"></div>
+
+                    </div>
+
+                    <p class="mt-2">Remera "El arbol de la muerte"</p>
                     <p class="text-green-400">$30.000</p>
+
                     <a href="#" id="btnComprar"
                         class="inline-block mt-4 bg-red-600 px-4 py-2 rounded hover:bg-red-500 transition">
                         Comprar
                     </a>
+
+                    <!--Cierra seccion nueva-->
+
                 </div>
 
             </div>
@@ -272,6 +301,11 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <!-- Ampliar imagen producto -->
+    <div id="modalImagen" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+        <img id="imagenAmpliada" class="max-w-[90%] max-h-[90%] rounded-lg">
+    </div>
 </body>
 
 </html>
